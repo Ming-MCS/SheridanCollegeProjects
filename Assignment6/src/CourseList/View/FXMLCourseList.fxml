@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefWidth="350" prefHeight="200" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CourseList.View.FXMLCourseListController">
+	<center>
+		<HBox spacing="20" >
+			<VBox HBox.hgrow="ALWAYS" >
+				<Label text = "Select a course from the list"/>
+				<ComboBox fx:id="lstCourse" maxWidth="Infinity" visibleRowCount="5"/>
+			</VBox>
+			<VBox HBox.hgrow="ALWAYS" >
+				<Label text = "Course Code"/>
+				<TextField fx:id="txtCode" maxWidth="Infinity"/> 
+				<Label text = "Course Grade"/>
+				<TextField fx:id="txtGrade" maxWidth="Infinity"/> 
+				<Label text = "Max Grade"/>
+				<TextField fx:id="txtMaxGrade" maxWidth="Infinity"/> 
+				<Label fx:id = "lblErrMsg"/>
+			</VBox>
+		</HBox>
+	</center>
+	<bottom>
+		<HBox spacing="10" BorderPane.alignment="BOTTOM_LEFT">
+			<Button text = "Edit" onAction="#edit" />
+			<Button text = "Exit" onAction="#exit" />
+		</HBox>
+	</bottom>
+</BorderPane>

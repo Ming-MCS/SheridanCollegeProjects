@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<HBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProductStock.View.FXMLProductStockController">
+	<children>
+		<VBox prefWidth="500" prefHeight="320"  >
+			<children>
+				<Label text = "Select an item"/>
+				
+				<ListView fx:id="lstStock"/>
+				
+				<!--<Label fx:id="lblSelected" text="Test selected item">-->
+				<Label fx:id="lblSelected">
+					<VBox.margin>
+						<Insets top = "15" bottom = "5"/>
+					</VBox.margin>
+				</Label>
+				
+			</children>
+		</VBox> 
+
+		<VBox>
+			<HBox.margin>
+				<Insets left = "15" />
+			</HBox.margin>
+			<children>
+				<Label text = "Add Products:"/>
+				<TextField fx:id="txtProductID" promptText="Product ID (AAA_000)"/>
+				<TextField fx:id="txtProductName" promptText="Product Name"/>
+				<TextField fx:id="txtQuantity" promptText="Current Quantity"/>
+				<TextField fx:id="txtRestockThresh" promptText="Restock Threshold"/>
+				<TextField fx:id="txtSalePrice" promptText="Sale Price"/>
+				<TextField fx:id="txtBuyPrice" promptText="Buy Price"/>
+				<Button text = "Add Product" onAction="#AddItem" />
+				
+				<Label text = "Amount to restock:">
+					<VBox.margin>
+						<Insets top = "10"/>
+					</VBox.margin>
+				</Label>
+				<TextField fx:id = "txtRestockAmount" promptText="Restock Amount"/>
+				<Button text = "Buy" onAction="#BuyItem" /> 
+				<Label text = "Restock Costs:"/>
+				<Label fx:id="lblRestockFee"/>
+			</children>
+		</VBox>
+	</children>
+
+</HBox>
